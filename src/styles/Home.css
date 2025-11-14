@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #F5D5D8;
+    min-height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: unset;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.section {
+    display: block;
+}
+
+.home-hero {
+    min-height: calc(100vh - 100px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0;
+    background: #F5D5D8;
+}
+
+.home-left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.fruits-image-home {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-content {
+    max-width: 450px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    margin-left: 20px;
+}
+
+.hero-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-title {
+    font-size: 32px;
+    color: #4A7C5C;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #5A5A5A;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.btn-hero {
+    padding: 14px 40px;
+    background: #5A8C6C;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(90, 140, 108, 0.3);
+}
+
+.btn-hero:hover {
+    background: #4A7C5C;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(90, 140, 108, 0.4);
+}
+
+.stat-item {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid #E8E8E8;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #E89080;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #666666;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .home-hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #F5D5D8;
+    min-height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: unset;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.section {
+    display: block;
+}
+
+.datatest-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 100px);
+    align-items: center;
+    background: #F5D5D8;
+}
+
+.datatest-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.fruits-image-datatest {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.datatest-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.upload-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.upload-card h3 {
+    color: #8B6F6F;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.upload-text {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.file-input-wrapper {
+    margin-bottom: 20px;
+}
+
+.file-selection-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-select-file {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #e0e0e0;
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.btn-select-file:hover {
+    background: #d0d0d0;
+}
+
+.file-name {
+    color: #999;
+    font-size: 14px;
+    flex: 1;
+    text-align: left;
+}
+
+.btn-upload {
+    width: 100%;
+    padding: 14px;
+    background: #F5D5D8;
+    color: #8B6F6F;
+    border: 2px solid #E89080;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-upload:hover:not(:disabled) {
+    background: #E89080;
+    color: white;
+}
+
+.btn-upload:disabled {
+    background: #F5D5D8;
+    color: #8B6F6F;
+    cursor: not-allowed;
+    opacity: 0.6;
+    border-color: #E89080;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.loading-spinner p {
+    color: #8B6F6F;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #E89080;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.results-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.results-header h2 {
+    color: #666;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.results-header h3 {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #5A8C6C;
+    margin: 10px 0;
+}
+
+.scientific-name {
+    color: #666;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.benefits-table {
+    margin: 30px 0;
+}
+
+.benefits-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.benefits-table th {
+    background-color: #f8f8f8;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.benefits-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+    color: #555;
+    line-height: 1.6;
+}
+
+.benefits-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.benefits-table td:first-child {
+    font-weight: 600;
+    width: 200px;
+}
+
+.btn-upload-another {
+    width: 100%;
+    padding: 14px;
+    background: #F5D5D8;
+    color: #8B6F6F;
+    border: 2px solid #E89080;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.btn-upload-another:hover {
+    background: #E89080;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .datatest-container {
+        grid-template-columns: 1fr;
+    }
+}
