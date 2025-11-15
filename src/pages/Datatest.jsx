@@ -5,7 +5,7 @@ import Loader from '../components/Loader';
 import Card from '../components/Card';
 import { classifyImage } from '../utils/classifier';
 // import { saveToHistory } from '../utils/history';
-import { productsDatabase, benefitDescriptions } from '../utils/database';
+import { productsDatabase } from '../utils/database';
 import '../styles/Datatest.css';
 
 const Datatest = () => {
@@ -89,16 +89,16 @@ const Datatest = () => {
                     <table>
                         <thead>
                             <tr>
-                                <th>Benefit</th>
-                                <th>Description</th>
+                                <th>Beneficio</th>
+                                <th>Descripción</th>
                             </tr>
                         </thead>
                         <tbody>
                             {result.status === 'fresh' ? (
                                 product.benefits.map((benefit, index) => (
                                     <tr key={index}>
-                                        <td>{benefit}</td>
-                                        <td>{benefitDescriptions[benefit] || 'Este nutriente proporciona importantes beneficios para la salud.'}</td>
+                                        <td>{benefit.name}</td>
+                                        <td>{benefit.description}</td>
                                     </tr>
                                 ))
                             ) : (
