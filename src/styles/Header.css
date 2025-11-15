@@ -9,6 +9,25 @@
     gap: 20px;
 }
 
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: nowrap;
+        gap: 0;
+        padding: 10px 10px 10px 15px;
+    }
+    .logo-section {
+        flex: 1;
+        min-width: 0;
+    }
+    .logo-text .header-title {
+        font-size: 13px !important;
+        text-align: left;
+        word-break: break-word;
+        max-width: 70vw;
+        white-space: normal;
+    }
+}
+
 .logo-section {
     display: flex;
     align-items: center;
@@ -19,6 +38,32 @@
     font-size: 24px;
     margin-bottom: 2px;
 }
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+    .logo-text .header-title {
+        font-size: 15px !important;
+        text-align: left;
+        word-break: break-word;
+        max-width: 90vw;
+        white-space: normal;
+    }
+    .navigation {
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .hamburger {
+        margin-left: auto;
+        margin-right: 0;
+        align-self: flex-end;
+    }
+}
+
 
 .navigation {
     flex: 1;
@@ -52,4 +97,83 @@
 .nav-menu a.active {
     color: #000000;
     background: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Hamburguesa y menú responsivo --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    margin-right: 10px;
+}
+.hamburger .bar {
+    width: 28px;
+    height: 4px;
+    background: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        position: relative;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav-menu {
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 8px;
+        background: linear-gradient(to right, #8B6F6F, #e37f7a);
+        width: 190px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+        border-radius: 0 0 14px 14px;
+        padding: 10px 0 10px 0;
+        gap: 0;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s, transform 0.3s;
+        z-index: 20;
+    }
+    .nav-menu.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    .nav-menu li {
+        display: block;
+        text-align: right;
+    }
+    .nav-menu a {
+        padding: 12px 24px;
+        color: #fff;
+        background: none;
+        border-radius: 0;
+        font-size: 17px;
+    }
+    .nav-menu a.active, .nav-menu a:hover {
+        background: rgba(255,255,255,0.18);
+        color: #000;
+    }
 }

@@ -6,7 +6,7 @@ const Header = () => {
         <header className="header">
             <div className="logo-section">
                 <div className="logo-text">
-                    <h2>Fresh Vegetable and Fruit Detection</h2>
+                    <h2 className="header-title">Fresh Vegetable and Fruit Detection</h2>
                 </div>
             </div>
             <Navbar />
